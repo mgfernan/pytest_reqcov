@@ -1,0 +1,7 @@
+item;type;status;tests
+REQ001;requirement;PASSED;test_req_1
+REQ002;requirement;PASSED;test_req_2
+REQ003;requirement;FAILED;test_req_3
+Product_A;product;PASSED;test_product_a
+Product_B;product;FAILED;test_product_b
+Product_C;product;PASSED;test_product_c

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  pytest-reqcov-dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspaces/pytest-reqcov:cached
+      - ~/.gitconfig:/home/vscode/.gitconfig:ro
+      - ~/.ssh:/home/vscode/.ssh:ro
+    environment:
+      - PYTHONPATH=/workspaces/pytest-reqcov/src
+    working_dir: /workspaces/pytest-reqcov
+    command: sleep infinity
+    stdin_open: true
+    tty: true
+    networks:
+      - pytest-reqcov-network
+
+
+networks:
+  pytest-reqcov-network:
+    driver: bridge
