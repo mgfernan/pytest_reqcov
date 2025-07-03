@@ -7,7 +7,7 @@ from typing import List
 import numpy as np
 import pandas as pd
 import pytest
-
+from _pytest.runner import CallInfo
 
 REQ_FILE_OPTION_STR = "--reqcov-reqs"
 PROD_FILE_OPTION_STR = "--reqcov-prods"
@@ -105,7 +105,7 @@ def pytest_collection_modifyitems(config, items):
                     config.product_coverage[product_id] = []
 
 
-def pytest_runtest_makereport(item, call: pytest.CallInfo):
+def pytest_runtest_makereport(item, call: CallInfo):
 
     if call.when == "call":
 
