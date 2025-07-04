@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pytest-reqcov"
-version = "0.1.0"
+version = "0.2.0"
 description = "A pytest plugin for requirement coverage tracking"
 readme = "README.md"
 license = {text = "MIT"}
