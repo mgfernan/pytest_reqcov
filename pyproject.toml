@@ -62,6 +62,9 @@ Changelog = "https://github.com/mgfernan/pytest_reqcov/blob/main/CHANGELOG.md"
 [project.entry-points.pytest11]
 reqcov = "pytest_reqcov.plugin"
 
+[project.scripts]
+reqcov-merge = "pytest_reqcov.merge:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
